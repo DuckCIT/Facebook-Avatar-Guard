@@ -7,7 +7,8 @@
         "activeTab",
         "scripting",
         "storage",
-        "webNavigation"
+        "webNavigation",
+        "notifications"
     ],
     "host_permissions": [
         "*://*.facebook.com/*"
