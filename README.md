@@ -6,6 +6,10 @@
 <br/>
 <p align="center">This extension is an <strong>open-source</strong> MIT-licensed <strong>browser extension</strong> that allows users to easily enable or disable the <strong>profile picture guard</strong> feature on Facebook. The <strong>profile picture guard</strong> helps protect your profile picture from being downloaded, shared, or misused by others.</p>
 
+## 🔥 What's new in v1.0.1
+- Fixed Facebook GraphQL update: Updated shield request to match Facebook's latest GraphQL parameters and headers.
+- No more instant 429 rate-limit: Adds missing request headers/tokens used by Facebook (e.g. x-fb-lsd, x-asbd-id) to improve reliability.
+
 ## Features
 
 - **Enable shield**: Activate the guard to secure your profile picture.

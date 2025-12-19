@@ -65,8 +65,24 @@ document.addEventListener('DOMContentLoaded', function() {
             fbDtsg,
             toggle
         }, (response) => {
-            if (chrome.runtime.lastError || response.error) {
-                updateStatus('Failed: ' + (chrome.runtime.lastError?.message || response.error), 'error');
+            // Kiểm tra lỗi từ runtime
+            if (chrome.runtime.lastError) {
+                updateStatus('Failed: ' + chrome.runtime.lastError.message, 'error');
+                setButtonsState(false);
+                return;
+            }
+
+            // Kiểm tra lỗi từ response gửi về
+            if (response && response.error) {
+                const errorMsg = response.error;
+                
+                // [FIX 429]: Hiển thị thông báo thân thiện nếu gặp lỗi 429
+                if (errorMsg.includes('RATE_LIMIT_429')) {
+                    updateStatus('Facebook blocked (429). Wait 5-10 mins!', 'error');
+                } else {
+                    updateStatus('Error: ' + errorMsg.substring(0, 40) + '...', 'error'); // Cắt ngắn lỗi nếu quá dài
+                }
+                
                 setButtonsState(false);
             } else {
                 const successMsg = toggle ? 'Shield enabled' : 'Shield disabled';
