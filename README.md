@@ -18,6 +18,12 @@
 
 ## Installation
 
+### Firefox (Recommended)
+
+Install directly from Firefox Add-ons (AMO): [Facebook Avatar Guard](https://addons.mozilla.org/en-US/firefox/addon/facebook-avatar-guard/)
+
+### Chrome / Edge (Developer mode)
+
 1. Download the extension files.
 2. Open your browser and navigate to the extensions page.
     - For Chrome: Go to `chrome://extensions/`.
@@ -32,7 +38,7 @@
 3. Refresh your Facebook profile page to see the changes.
 
 ## Copyright
-© 2025 by Nguyen Trong Duc (DuckCIT). All rights reserved. Feel free to build upon this project, but please credit the original author.
+ 2025 by Nguyen Trong Duc (DuckCIT). All rights reserved. Feel free to build upon this project, but please credit the original author.
 
 ## Disclaimer
 
